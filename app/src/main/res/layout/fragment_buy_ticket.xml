@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BuyTicketFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/txt_byt"
+            android:layout_width="260dp"
+            android:layout_height="229dp"
+            android:fontFamily="@font/interextrabold"
+            android:gravity="center"
+            android:src="@drawable/book_image"
+            android:text="@string/bookyourtrain"
+            android:textColor="@color/dark_blue"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_travel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="18dp"
+            app:cardBackgroundColor="@color/light_blue"
+            app:layout_constraintTop_toBottomOf="@id/txt_byt">
+
+            <TextView
+                android:id="@+id/txt_train"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Nama Kereta"
+                android:gravity="center"
+                android:fontFamily="@font/interextrabold"
+                android:textColor="@color/dark_blue"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp">
+
+                <ImageView
+                    android:id="@+id/img_train"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/baseline_train_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/baseline_train_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/grey"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/img_train"/>
+
+                <TextView
+                    android:id="@+id/txt_departure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stasiun\nKeberangkatan"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/interregular"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/line"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txt_destination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stasiun\nTujuan"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/interregular"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:gravity="end"
+                    app:layout_constraintTop_toBottomOf="@id/line"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/txt_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_blue"
+                    android:fontFamily="@font/intersemibold"
+                    android:layout_marginTop="10dp"
+                    android:text="IDR 100.000"
+                    app:layout_constraintTop_toBottomOf="@id/txt_departure"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/label_pname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Penumpang"
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp"
+            android:fontFamily="@font/intersemibold"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/card_travel"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_txt_passenger_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="8dp"
+            android:hint="Masukkan nama penumpang"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:fontFamily="@font/interregular"
+            app:layout_constraintTop_toBottomOf="@id/label_pname"
+            style="@style/EditTextBackground"/>
+
+        <TextView
+            android:id="@+id/label_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tanggal"
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp"
+            android:fontFamily="@font/intersemibold"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_passenger_name"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_txt_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="8dp"
+            android:hint="Pilih atau masukkan tanggal"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:fontFamily="@font/interregular"
+            app:layout_constraintTop_toBottomOf="@id/label_date"
+            style="@style/EditTextBackground"/>
+
+        <ImageButton
+            android:id="@+id/btn_date_picker"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/baseline_date_range_24"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="24dp"
+            android:contentDescription="@string/show"
+            app:layout_constraintTop_toBottomOf="@id/label_date"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/label_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kelas kereta"
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp"
+            android:fontFamily="@font/intersemibold"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_date"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/label_class"
+            style="@style/EditTextBackground"/>
+
+        <TextView
+            android:id="@+id/label_additional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fasilitas tambahan"
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp"
+            android:fontFamily="@font/intersemibold"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/spinner_class"/>
+
+        <HorizontalScrollView
+            android:id="@+id/scrollview_paket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/label_additional"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_paket_satu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paket_satu"
+                    android:fontFamily="@font/interlight"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/dark_blue"/>
+
+                <Button
+                    android:id="@+id/btn_paket_dua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/dark_blue"
+                    android:fontFamily="@font/interlight"
+                    android:text="@string/paket_dua"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_paket_tiga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paket_tiga"
+                    android:fontFamily="@font/interlight"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/dark_blue"/>
+
+                <Button
+                    android:id="@+id/btn_paket_empat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paket_empat"
+                    android:fontFamily="@font/interlight"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/dark_blue"/>
+
+                <Button
+                    android:id="@+id/btn_paket_lima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paket_lima"
+                    android:fontFamily="@font/interlight"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/dark_blue"/>
+
+                <Button
+                    android:id="@+id/btn_paket_enam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paket_enam"
+                    android:fontFamily="@font/interlight"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/dark_blue"/>
+
+                <Button
+                    android:id="@+id/btn_paket_tujuh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paket_tujuh"
+                    android:fontFamily="@font/interlight"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/dark_blue"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/txt_paket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fasilitas tambahan: "
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp"
+            android:fontFamily="@font/intersemibold"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/scrollview_paket"/>
+
+        <TextView
+            android:id="@+id/txt_total_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total harga: "
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp"
+            android:fontFamily="@font/interbold"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_paket"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Ticket"
+            android:layout_marginBottom="24dp"
+            android:layout_marginHorizontal="18dp"
+            style="@style/ButtonPrimaryActive"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

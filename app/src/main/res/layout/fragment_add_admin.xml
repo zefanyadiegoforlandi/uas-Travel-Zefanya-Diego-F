@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddAdminFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="24dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_txt_username"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Username kamu"
+            android:inputType="text"
+            android:autofillHints="username"
+            android:layout_marginTop="12dp"
+            style="@style/EditTextBackground"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nama kamu"
+            android:inputType="text"
+            android:autofillHints="username"
+            android:layout_marginTop="12dp"
+            style="@style/EditTextBackground"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_username"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_txt_nim"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="NIK Kamu"
+            android:inputType="text"
+            android:autofillHints="22/505613/SV/21835"
+            android:layout_marginTop="12dp"
+            style="@style/EditTextBackground"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_name"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_txt_date_of_birth"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Tanggal lahir kamu"
+            android:inputType="date"
+            android:layout_marginTop="12dp"
+            style="@style/EditTextBackground"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_nim"/>
+
+        <ImageButton
+            android:id="@+id/btn_date_picker"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/baseline_date_range_24"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/show"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_nim"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_txt_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Password kamu"
+            android:inputType="textPassword"
+            android:autofillHints="username"
+            android:layout_marginTop="12dp"
+            style="@style/EditTextBackground"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_date_of_birth"/>
+
+        <ImageButton
+            android:id="@+id/btn_show_pw"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/baseline_visibility_24"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/show"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_date_of_birth"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_txt_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Konfirmasi password kamu"
+            android:inputType="textPassword"
+            android:autofillHints="username"
+            android:layout_marginTop="12dp"
+            style="@style/EditTextBackground"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_password"/>
+
+        <ImageButton
+            android:id="@+id/btn_show_pw2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/baseline_visibility_24"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="@string/show"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_password"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambahkan admin"
+            android:layout_marginTop="12dp"
+            style="@style/ButtonPrimaryActive"
+            app:layout_constraintTop_toBottomOf="@id/edit_txt_confirm_password"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

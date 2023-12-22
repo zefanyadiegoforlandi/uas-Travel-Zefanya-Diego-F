@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/listTravelFragment2"
+        android:icon="@drawable/baseline_app_registration_24"
+        android:title="Book"/>
+    <item
+        android:id="@+id/historyFragment2"
+        android:icon="@drawable/baseline_confirmation_number_24"
+        android:title="Orders"/>
+    <item
+        android:id="@+id/profileFragment2"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:title="Settings"/>
+</menu>

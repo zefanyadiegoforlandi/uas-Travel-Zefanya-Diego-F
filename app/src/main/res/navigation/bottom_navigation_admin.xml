@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation_admin"
+    app:startDestination="@id/listTravelAdminFragment2">
+
+    <fragment
+        android:id="@+id/listTravelAdminFragment2"
+        android:name="com.example.traintix.ListTravelAdminFragment"
+        android:label="fragment_list_travel_admin"
+        tools:layout="@layout/fragment_list_travel_admin" >
+        <action
+            android:id="@+id/action_listTravelAdminFragment2_to_addTravelFragment"
+            app:destination="@id/addTravelFragment" />
+        <action
+            android:id="@+id/action_listTravelAdminFragment2_to_editTravelFragment"
+            app:destination="@id/editTravelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileAdminFragment2"
+        android:name="com.example.traintix.ProfileAdminFragment"
+        android:label="fragment_profile_admin"
+        tools:layout="@layout/fragment_profile_admin" >
+        <action
+            android:id="@+id/action_profileAdminFragment2_to_addAdminFragment"
+            app:destination="@id/addAdminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTravelFragment"
+        android:name="com.example.traintix.AddTravelFragment"
+        android:label="fragment_add_travel"
+        tools:layout="@layout/fragment_add_travel" />
+    <fragment
+        android:id="@+id/editTravelFragment"
+        android:name="com.example.traintix.EditTravelFragment"
+        android:label="fragment_edit_travel"
+        tools:layout="@layout/fragment_edit_travel" />
+    <fragment
+        android:id="@+id/addAdminFragment"
+        android:name="com.example.traintix.AddAdminFragment"
+        android:label="fragment_add_admin"
+        tools:layout="@layout/fragment_add_admin" />
+</navigation>

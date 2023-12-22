@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/listTravelFragment2">
+
+    <fragment
+        android:id="@+id/historyFragment2"
+        android:name="com.example.traintix.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.traintix.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/listTravelFragment2"
+        android:name="com.example.traintix.ListTravelFragment"
+        android:label="fragment_list_travel"
+        tools:layout="@layout/fragment_list_travel" >
+        <action
+            android:id="@+id/action_listTravelFragment2_to_buyTicketFragment"
+            app:destination="@id/buyTicketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyTicketFragment"
+        android:name="com.example.traintix.BuyTicketFragment"
+        android:label="fragment_buy_ticket"
+        tools:layout="@layout/fragment_buy_ticket" >
+        <action
+            android:id="@+id/action_buyTicketFragment_to_historyFragment2"
+            app:destination="@id/historyFragment2" />
+    </fragment>
+</navigation>

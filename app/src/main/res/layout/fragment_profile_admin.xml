@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/backgroud"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileAdminFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
+            android:layout_width="172dp"
+            android:layout_height="165dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/user"
+            app:layout_constraintBottom_toTopOf="@+id/profile_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/circularCorner" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/interbold"
+            android:gravity="center"
+            android:text="Loading... \nLoading..."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="240dp" />
+
+        <LinearLayout
+            android:id="@+id/add_admin"
+            android:layout_width="367dp"
+            android:layout_height="78dp"
+            android:layout_marginHorizontal="24dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="336dp">
+
+            <ImageView
+                android:layout_width="43dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/baseline_add_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/intersemibold"
+                android:text="Add another account"
+                android:layout_gravity="center"
+                android:textColor="@color/grey"
+                android:textSize="24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/logout"
+            android:layout_width="362dp"
+            android:layout_height="64dp"
+            android:layout_marginHorizontal="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/add_admin"
+            tools:layout_editor_absoluteX="24dp">
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/baseline_logout_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/intersemibold"
+                android:text="Log out"
+                android:gravity="center"
+                android:textColor="@color/grey"
+                android:textSize="24dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

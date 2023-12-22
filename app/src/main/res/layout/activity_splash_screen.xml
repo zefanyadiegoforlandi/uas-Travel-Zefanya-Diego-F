@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud"
+    tools:context=".SplashScreenActivity">
+
+    <ImageView
+        android:id="@+id/img_train"
+        android:layout_width="411dp"
+        android:layout_height="405dp"
+        android:background="@drawable/book_image"
+        app:layout_constraintBottom_toTopOf="@id/btn_to_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <TextView
+        android:id="@+id/txt_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Traintix"
+        android:textColor="@color/dark_blue"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/interextrabold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/img_train"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_to_main"
+        style="@style/ButtonPrimaryActive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:text="Mulai"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_welcome"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <TextView
+        android:id="@+id/txt_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/interlight"
+        android:gravity="center"
+        android:text="Kunjungi kota impianmu hanya dengan 1x klik!"
+        android:textColor="@color/dark_blue"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_to_main"
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcome" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

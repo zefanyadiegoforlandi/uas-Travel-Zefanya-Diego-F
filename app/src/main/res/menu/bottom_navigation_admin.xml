@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/listTravelAdminFragment2"
+        android:icon="@drawable/baseline_dataset_linked_24"
+        android:title="Database"/>
+    <item
+        android:id="@+id/profileAdminFragment2"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:title="Profile"/>
+</menu>
