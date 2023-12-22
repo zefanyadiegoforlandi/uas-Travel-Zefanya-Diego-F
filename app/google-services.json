@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "270191184640",
+    "project_id": "travel-uas-zefanya-diego-f",
+    "storage_bucket": "travel-uas-zefanya-diego-f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270191184640:android:26258bc4e38c7a3c9a41e5",
+        "android_client_info": {
+          "package_name": "com.example.traintix"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDap64Q0lWukv9qqQVPT2nYkMj7VCWFGz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
